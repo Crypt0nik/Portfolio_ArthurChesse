@@ -47,6 +47,24 @@
     --transition2: .5s ease-in-out;
 }
 
+body.light-mode {
+    --eerie-black1: hsl(0, 0%, 100%);
+    --eerie-black2: hsl(0, 0%, 98%);
+    --onyx: hsl(0, 0%, 90%);
+    --jet: hsl(0, 0%, 80%);
+    --smoky-black: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 20%);
+    --light-gray70: hsla(0, 0%, 20%, 0.7);
+    --white1: hsl(0, 0%, 0%);
+    --white2: hsl(0, 0%, 10%);
+    --bg-gradient-onyx: linear-gradient(to bottom right, #fff 3%, #f7f7f7 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, #ffffff40 3%, transparent 100%), #f5f5f5;
+    --bg-gradient-yellow1: linear-gradient(to bottom right, #ffd36e 0%, transparent 50%);
+    --bg-gradient-yellow2: linear-gradient(135deg, #ffd36e40 0%, transparent 60%), #f5f5f5;
+    --border-gradient-onyx: linear-gradient(to bottom right, #dcdcdc 0%, transparent 50%);
+  }
+  
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;

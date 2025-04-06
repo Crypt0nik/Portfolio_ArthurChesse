@@ -136,3 +136,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
   }
   
 
+  // const toggleThemeBtn = document.getElementById("theme-toggle");
+
+  // toggleThemeBtn.addEventListener("click", () => {
+  //   document.body.classList.toggle("light-mode");
+  
+  //   const isLight = document.body.classList.contains("light-mode");
+  //   toggleThemeBtn.querySelector("ion-icon").name = isLight ? "moon-outline" : "sunny-outline";
+  //   toggleThemeBtn.querySelector("span").textContent = isLight ? "Dark Mode" : "Light Mode";
+  // });
+  
