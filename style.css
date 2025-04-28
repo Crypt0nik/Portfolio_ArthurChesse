@@ -48,40 +48,22 @@
 }
 
 body.light-mode {
-    --eerie-black1: #f7f8fa; /* gris bleuté très clair */
-    --eerie-black2: #f2f3f7; /* gris pastel doux */
-    --onyx: #e3e7ed; /* gris bleuté moderne */
-    --jet: #d1d6de; /* gris clair moderne */
-    --smoky-black: #f9fafb; /* blanc cassé moderne */
-    --light-gray: #3a3a3a; /* gris foncé pour le texte */
-    --light-gray70: rgba(58,58,58,0.7);
-    --white1: #23272f; /* gris anthracite pour contraste */
-    --white2: #2d313a; /* gris foncé pour titres */
-    --bg-gradient-onyx: linear-gradient(to bottom right, #f7f8fa 3%, #e3e7ed 97%);
-    --bg-gradient-jet: linear-gradient(to bottom right, #e3e7ed40 3%, transparent 100%), #f2f3f7;
-    --bg-gradient-yellow1: linear-gradient(to bottom right, #ffe6b3 0%, transparent 50%);
-    --bg-gradient-yellow2: linear-gradient(135deg, #ffe6b340 0%, transparent 60%), #f2f3f7;
-    --border-gradient-onyx: linear-gradient(to bottom right, #d1d6de 0%, transparent 50%);
-}
-
-body.light-mode .navbar {
-    background: rgba(247, 248, 250, 0.85);
-    border-color: var(--jet);
-    box-shadow: var(--shadow2);
-}
-body.light-mode .navbar-link {
-    color: var(--light-gray);
-}
-body.light-mode .navbar-link.active {
-    color: var(--orange-yellow-crayola);
-}
-body.light-mode .theme-toggle-btn {
-    color: var(--light-gray);
-}
-body.light-mode .contact-link {
-    color: var(--light-gray) !important;
-    text-decoration: none;
-}
+    --eerie-black1: hsl(0, 0%, 100%);
+    --eerie-black2: hsl(0, 0%, 98%);
+    --onyx: hsl(0, 0%, 90%);
+    --jet: hsl(0, 0%, 80%);
+    --smoky-black: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 20%);
+    --light-gray70: hsla(0, 0%, 20%, 0.7);
+    --white1: hsl(0, 0%, 0%);
+    --white2: hsl(0, 0%, 10%);
+    --bg-gradient-onyx: linear-gradient(to bottom right, #fff 3%, #f7f7f7 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, #ffffff40 3%, transparent 100%), #f5f5f5;
+    --bg-gradient-yellow1: linear-gradient(to bottom right, #ffd36e 0%, transparent 50%);
+    --bg-gradient-yellow2: linear-gradient(135deg, #ffd36e40 0%, transparent 60%), #f5f5f5;
+    --border-gradient-onyx: linear-gradient(to bottom right, #dcdcdc 0%, transparent 50%);
+  }
+  
 
 *, *::before, *::after {
     margin: 0;
@@ -1497,25 +1479,4 @@ textarea.form-input {
     .social-list { justify-content: center; }
 
     .timeline-text { max-width: 700px; }
-}
-
-.theme-toggle-btn {
-    padding: 0 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: var(--light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s;
-}
-.theme-toggle-btn:hover,
-.theme-toggle-btn:focus {
-    color: var(--orange-yellow-crayola);
-}
-
-.theme-toggle-btn ion-icon {
-    pointer-events: none;
 }

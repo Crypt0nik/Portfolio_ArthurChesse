@@ -18,15 +18,19 @@
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 2fr));
+        grid-auto-rows: 180px;
+        
+      
+      
+      gap: 15px;
       padding: 10px;
     }
     .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      aspect-ratio: 4/3;
+      
+      height: auto;
+      max-height: 200px;
+      object-fit: contain;
       border-radius: 12px;
       cursor: pointer;
       transition: transform 0.2s ease;

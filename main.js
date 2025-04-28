@@ -135,33 +135,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
     });
   }
   
-// Système de changement de thème (clair/sombre)
-const themeToggleBtn = document.getElementById("theme-toggle");
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-function setTheme(light) {
-  if (light) {
-    document.body.classList.add("light-mode");
-    themeToggleBtn.querySelector("ion-icon").setAttribute("name", "sunny-outline");
-    localStorage.setItem("theme", "light");
-  } else {
-    document.body.classList.remove("light-mode");
-    themeToggleBtn.querySelector("ion-icon").setAttribute("name", "moon-outline");
-    localStorage.setItem("theme", "dark");
-  }
-}
+  // const toggleThemeBtn = document.getElementById("theme-toggle");
 
-// Initialisation du thème au chargement
-(function() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") setTheme(true);
-  else if (savedTheme === "dark") setTheme(false);
-  else setTheme(!prefersDark);
-})();
-
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener("click", () => {
-    const isLight = document.body.classList.contains("light-mode");
-    setTheme(!isLight);
-  });
-}
+  // toggleThemeBtn.addEventListener("click", () => {
+  //   document.body.classList.toggle("light-mode");
+  
+  //   const isLight = document.body.classList.contains("light-mode");
+  //   toggleThemeBtn.querySelector("ion-icon").name = isLight ? "moon-outline" : "sunny-outline";
+  //   toggleThemeBtn.querySelector("span").textContent = isLight ? "Dark Mode" : "Light Mode";
+  // });
+  
