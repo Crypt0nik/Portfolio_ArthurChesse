@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Rig de Minage - Arthur Chessé</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/log.png" type="image/x-icon">
+    <style>
+        .gallery-section {
+            margin-bottom: 40px;
+        }
+        .gallery-title {
+            font-size: var(--fs4);
+            color: var(--white2);
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            display: none;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <article class="about active" data-page="projet-rig-minage">
+
+                <div style="margin-bottom: 20px; padding-left: 10px;">
+                        <a href="javascript:history.back()" class="btn-retour" style="color: var(--orange-yellow-crayola); text-decoration: none; font-weight: bold;">
+                            ← Retour
+                        </a>
+                    </div>
+                
+            <header>
+                <h2 class="h2 article-title">Projet Rig de Minage</h2>
+            </header>
+            
+            <section class="about-text">
+                <p><strong>Projet personnel :</strong> Montage complet d'un rig de minage</p>
+                <p><strong>Matériel :</strong> Composants informatiques spécialisés (cartes graphiques, alimentation, carte mère, etc.)</p>
+                <p><strong>Rôle :</strong> Conception, assemblage, configuration et optimisation</p>
+                <p>
+                    Dans le cadre de ce projet personnel, j'ai conçu et monté un rig de minage de A à Z. J'ai sélectionné chaque composant en fonction des besoins de performance et d'efficacité énergétique, puis procédé à l'assemblage physique de la machine.
+                </p>
+                <p>
+                    J'ai ensuite installé et configuré le système d'exploitation ainsi que les logiciels de minage, en optimisant les paramètres pour maximiser le rendement tout en assurant la stabilité du système. Ce projet m'a permis de développer mes compétences techniques en hardware, en gestion thermique et en optimisation logicielle.
+                </p>
+            </section>
+
+            <section class="service">
+                <h3 class="h3 service-title">Galerie du projet</h3>
+
+                <div class="gallery-section">
+                    <h4 class="gallery-title">Montage du Rig</h4>
+                    <div class="gallery">
+                        <img src="/images/minage.jpg" alt="Montage rig 1">
+                        <img src="/images/minage1.jpg" alt="Montage rig 2">
+                        <img src="/images/minage2.jpg" alt="Montage rig 3">
+                        <img src="/images/minage3.JPG" alt="Montage rig 4">
+                    </div>
+                </div>
+
+            </section>
+        </article>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const galleryImages = document.querySelectorAll('.gallery img');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

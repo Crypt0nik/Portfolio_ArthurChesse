@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Sac 3D - Arthur Chessé</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/images/log.png" type="image/x-icon">
+  <style>
+    .gallery-section {
+      margin-bottom: 40px;
+    }
+    .gallery-title {
+      font-size: var(--fs4);
+      color: var(--white2);
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      padding: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <article class="about active" data-page="projet-sac-3d">
+
+        <div style="margin-bottom: 20px; padding-left: 10px;">
+            <a href="javascript:history.back()" class="btn-retour" style="color: var(--orange-yellow-crayola); text-decoration: none; font-weight: bold;">
+              ← Retour
+            </a>
+          </div>
+        
+      <header>
+        <h2 class="h2 article-title">Projet Sac 3D</h2>
+      </header>
+      
+      
+
+      <section class="about-text">
+        <p><strong>Client :</strong> Projet professionnel réalisé pour un client (nom confidentiel)</p>
+        <p><strong>Logiciel :</strong> CLO Standalone</p>
+        <p><strong>Rôle :</strong> Concepteur et modélisateur 3D - réalisation des fiches techniques</p>
+        <p>
+          Dans le cadre de ce projet réel commandé par un client, j'ai été chargé de modéliser un sac en 3D à l'aide du logiciel CLO Standalone. L'objectif était double : créer un rendu réaliste du produit final et produire une documentation technique détaillée pour la fabrication.
+        </p>
+        <p>
+          Le travail s'est déroulé en plusieurs étapes : écoute du besoin du client, modélisation à partir de croquis et inspirations, ajustements techniques (coutures, textures, matières), puis création de fiches techniques destinées à la production. Ce projet m'a permis de mettre à profit ma créativité, ma rigueur et mon sens du détail dans un contexte professionnel.
+        </p>
+      </section>
+
+      <section class="service">
+        <h3 class="h3 service-title">Galerie du projet</h3>
+
+        <div class="gallery-section">
+          <h4 class="gallery-title">Croquis</h4>
+          <div class="gallery">
+            <img src="/images/sac3Dcroquis.png" alt="Croquis 1">
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h4 class="gallery-title">Rendus 3D</h4>
+          <div class="gallery">
+            <img src="/images/rendusac1.png" alt="Rendu 3D 1">
+            <img src="/images/rendusac2.png" alt="Rendu 3D 2">
+            <img src="/images/rendusac3.png" alt="Rendu 3D 3">
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h4 class="gallery-title">Fiches techniques</h4>
+          <div class="gallery">
+            <img src="/images/techf1.png" alt="Fiche technique 1">
+            <img src="/images/techf2.png" alt="Fiche technique 2">
+          </div>
+        </div>
+
+      </section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Lightbox Image">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const galleryImages = document.querySelectorAll('.gallery img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
