@@ -52,6 +52,29 @@
             max-height: 90%;
             border-radius: 10px;
         }
+
+        /* Mode clair pour la page rig de minage */
+        body.light-mode .about {
+            background: var(--bg-gradient-yellow2);
+        }
+        
+        body.light-mode .gallery {
+            background: rgba(247, 248, 250, 0.5);
+            border-radius: 12px;
+            padding: 15px;
+        }
+        
+        body.light-mode .gallery img {
+            box-shadow: var(--shadow2);
+        }
+        
+        body.light-mode .gallery-title {
+            color: var(--white1);
+        }
+        
+        body.light-mode .btn-retour {
+            color: var(--orange-yellow-crayola) !important;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +83,7 @@
         <article class="about active" data-page="projet-rig-minage">
 
                 <div style="margin-bottom: 20px; padding-left: 10px;">
-                        <a href="javascript:history.back()" class="btn-retour" style="color: var(--orange-yellow-crayola); text-decoration: none; font-weight: bold;">
+                        <a href="index.html#portfolio" class="btn-retour" style="color: var(--orange-yellow-crayola); text-decoration: none; font-weight: bold;">
                             ← Retour
                         </a>
                     </div>
@@ -103,6 +126,17 @@
     </div>
 
     <script>
+        // Gestion du thème (synchronisé avec le portfolio principal)
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        }
+        
+        // Initialiser le thème au chargement de la page
+        document.addEventListener('DOMContentLoaded', initTheme);
+
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = lightbox.querySelector('img');
         const galleryImages = document.querySelectorAll('.gallery img');

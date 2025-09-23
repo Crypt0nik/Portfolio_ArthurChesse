@@ -1519,3 +1519,82 @@ textarea.form-input {
 .theme-toggle-btn ion-icon {
     pointer-events: none;
 }
+
+/* Bouton Rapport de Stage */
+.stage-button-section {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.stage-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: var(--bg-gradient-yellow2);
+    border: 1px solid var(--orange-yellow-crayola);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stage-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow3);
+    background: var(--bg-gradient-yellow1);
+}
+
+.stage-button-text {
+    font-size: var(--fs4);
+    font-weight: var(--fw500);
+    color: var(--white2);
+    transition: color 0.3s ease;
+}
+
+.stage-button:hover .stage-button-text {
+    color: var(--white1);
+}
+
+.stage-button-tag {
+    background: var(--orange-yellow-crayola);
+    color: var(--smoky-black);
+    font-size: var(--fs8);
+    font-weight: var(--fw600);
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mode clair pour le bouton */
+body.light-mode .stage-button {
+    background: var(--bg-gradient-onyx);
+    border-color: var(--orange-yellow-crayola);
+}
+
+body.light-mode .stage-button:hover {
+    background: var(--bg-gradient-yellow1);
+}
+
+body.light-mode .stage-button-text {
+    color: var(--light-gray);
+}
+
+body.light-mode .stage-button:hover .stage-button-text {
+    color: var(--white1);
+}
