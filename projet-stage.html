@@ -437,6 +437,185 @@
       background: var(--orange-yellow-crayola);
       box-shadow: var(--shadow4);
     }
+
+    /* Responsive Design - Mobile */
+    @media (max-width: 768px) {
+      .stage-header {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+      }
+
+      .comparison-container {
+        max-width: 100%;
+        margin: 15px 0;
+      }
+
+      .comparison-slider {
+        height: 300px;
+      }
+
+      .about-text {
+        margin-top: 20px !important;
+      }
+
+      .about-text p {
+        font-size: var(--fs6);
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .stage-nav {
+        padding: 15px 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .stage-nav-btn {
+        padding: 8px 12px;
+        font-size: var(--fs7);
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+      }
+
+      .progress-container {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .progress-item {
+        padding: 12px;
+        margin-bottom: 12px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .progress-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 35px;
+        height: 35px;
+      }
+
+      .timeline {
+        padding-left: 20px;
+      }
+
+      .timeline::before {
+        left: 10px;
+      }
+
+      .timeline-item {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .timeline-item::before {
+        left: -27px;
+        width: 10px;
+        height: 10px;
+      }
+
+      .skill-bar {
+        margin-bottom: 15px;
+      }
+
+      .skill-name {
+        font-size: var(--fs7);
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 5px;
+      }
+
+      .gallery img {
+        height: 180px;
+      }
+
+      .service-item {
+        padding: 15px;
+      }
+
+      .service-content-box {
+        padding: 0;
+      }
+
+      .h3.service-title,
+      .h3.testimonials-title {
+        font-size: var(--fs3);
+        margin-bottom: 20px;
+      }
+
+      .h4 {
+        font-size: var(--fs5);
+      }
+
+      .floating-action {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .floating-action ion-icon {
+        font-size: 20px !important;
+      }
+
+      .comparison-labels {
+        padding: 0 15px;
+      }
+
+      .label {
+        font-size: var(--fs8);
+        padding: 6px 12px;
+      }
+
+      .slider-handle::before {
+        width: 30px;
+        height: 30px;
+      }
+
+      .slider-handle::after {
+        font-size: 14px;
+      }
+    }
+
+    /* Responsive Design - Très petit mobile */
+    @media (max-width: 480px) {
+      .stage-nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .stage-nav-btn {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .comparison-slider {
+        height: 250px;
+      }
+
+      .about-text p {
+        font-size: var(--fs7);
+      }
+
+      .progress-item h4,
+      .timeline-item h4 {
+        font-size: var(--fs6);
+      }
+
+      .progress-item p,
+      .timeline-item p {
+        font-size: var(--fs8);
+      }
+
+      .service-item-text {
+        font-size: var(--fs8);
+      }
+    }
   </style>
 </head>
 <body>
